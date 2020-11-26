@@ -1,0 +1,19 @@
+<div class="card">
+
+    <div class="table-responsive">
+        <table class="table" *ngIf='users$ | async as users'>
+            <thead>
+                <tr>
+                    <th>User</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                    <tr *ngFor='let user of users'>
+                        <td>{{ user.name.first }} {{ user.name.last }}</td>
+                        <td>{{ user.email }}</td>
+                    </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
