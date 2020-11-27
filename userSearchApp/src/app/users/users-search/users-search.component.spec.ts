@@ -1,4 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { Store, StoreModule } from '@ngrx/store';
+import { State } from '../state/user.reducer';
+import { MockStore, provideMockStore } from '@ngrx/store/testing';
 
 import { UsersSearchComponent } from './users-search.component';
 
@@ -8,7 +11,8 @@ describe('UsersSearchComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ UsersSearchComponent ]
+      declarations: [ UsersSearchComponent ],
+      providers: [provideMockStore()]
     })
     .compileComponents();
   });
