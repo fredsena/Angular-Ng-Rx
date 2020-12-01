@@ -10,6 +10,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { AppModule } from '../app.module';
 import { EffectsModule } from '@ngrx/effects';
 import { UserEffects } from './state/user.effects';
+import { ReactiveFormsModule} from '@angular/forms';
 
 const userRoutes: Routes = [
   { path: '', component: UsersHomeComponent }
@@ -24,6 +25,7 @@ const userRoutes: Routes = [
   imports: [
     CommonModule,    
     FormsModule,
+    ReactiveFormsModule,
     RouterModule.forChild(userRoutes),
     StoreModule.forFeature('users', usersReducer),
     EffectsModule.forFeature([UserEffects])

@@ -10,7 +10,7 @@ import { getUsers } from '../state/user.reducer';
 })
 export class UsersService {
 
-  private usersUrl = "http://localhost:3000/users";
+  readonly usersUrl = "http://localhost:3000/users";
   
   constructor(private http: HttpClient) { }
 
