@@ -11,6 +11,8 @@ import { AppModule } from '../app.module';
 import { EffectsModule } from '@ngrx/effects';
 import { UserEffects } from './state/user.effects';
 import { ReactiveFormsModule} from '@angular/forms';
+import { DatepickerComponent } from '../shared/datepicker/datepicker.component';
+import { DropdownComponent } from '../shared/dropdown/dropdown.component';
 
 const userRoutes: Routes = [
   { path: '', component: UsersHomeComponent }
@@ -20,7 +22,9 @@ const userRoutes: Routes = [
   declarations: [
     UsersHomeComponent,
     UsersListComponent,
-    UsersSearchComponent
+    UsersSearchComponent,
+    DatepickerComponent,
+    DropdownComponent
   ],
   imports: [
     CommonModule,    

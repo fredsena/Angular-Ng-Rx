@@ -1,0 +1,12 @@
+
+<!-- [(ngModel)]="userIndex" -->
+<div class="card">
+    <label>Company : </label>
+    <select [(ngModel)]="userIndex" name="companies" id="companies" *ngIf='users$ | async as users'> 
+        <option value="" selected>Select Company</option>
+        <option *ngFor='let user of users' [ngValue]="user.index">
+           {{user.company}}
+        </option>
+    </select>
+
+</div>

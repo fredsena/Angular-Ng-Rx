@@ -8,29 +8,12 @@ import { FormBuilder, FormGroup, FormsModule } from '@angular/forms';
 })
 export class UsersHomeComponent implements OnInit, AfterViewInit {
 
-  @ViewChild ('birthDateElement') birthDateElementRef: ElementRef;
-
-  BirthDate: Date = null;  
-  usersHomeForm: FormGroup;
-
-  constructor(private formBuilder: FormBuilder) {  }
+  constructor() {  }
   
   ngOnInit(): void {
-    //this.BirthDate = new Date();
-
-    this.usersHomeForm = this.formBuilder.group({
-      BirthDate: [null]
-    })
   }
 
   ngAfterViewInit() {
-    console.log(this.birthDateElementRef);
-    this.birthDateElementRef.nativeElement.focus();
-  }
-
-  onSubmit() {
-    console.log(this.usersHomeForm.value);
-    console.log(this.usersHomeForm.value.BirthDate);
   }
 
 }
