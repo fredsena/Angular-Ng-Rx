@@ -14,13 +14,23 @@ export class DropdownComponent implements OnInit {
   users$: Observable<Users[]>;
   errorMessage$: Observable<string>;
   userIndex: any;
+  @Input() showFirstItem: boolean;
 
   constructor(private store: Store<State>) { }
 
   ngOnInit(): void {
     this.users$ = this.store.select(getUsers);
     this.errorMessage$ = this.store.select(getError);
+
+    //debugger;
     this.userIndex = "";
+
+    if (this.showFirstItem)
+    {
+      this.userIndex = 0;
+    }
+    
+
     //this.userIndex = 10;
   }
 
